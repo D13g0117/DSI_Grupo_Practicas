@@ -1,0 +1,5 @@
+.classform1 label{width:100px;display:inline-block}
+.classform1 input{width:200px}
+.classform1 select{width:300px}
+.class_comanda{background-color: coral;display:block;width:450px;}
+.class_comanda .titulo{text-align:center}

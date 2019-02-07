@@ -1,0 +1,39 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+   {{ title }}!
+  </h1>
+  <img width="100" alt="Angular Logo"
+  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdm
+  ciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzB
+  MMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8
+  cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyM
+  y4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMT
+  gyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGw
+  xNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  
+  </div>
+  <div class='class_comanda'>
+  <h2 class="titulo">COMANDA</h2>
+  <form class='classform1' #f='ngForm'>
+  <br/>
+  <label>Consumicion:</label>
+  <select name='lstColor' [(ngModel)]='codProducto'>
+   <option *ngFor='let prod of productos; let i=index' value='{{i}}'>{{prod[0]}} (
+  {{prod[1]}} €)</option>
+  </select>
+  <button type='button' (click)='addLinea()'>+</button>
+  </form>
+  <br/>
+  <h3>Consumiciones:</h3>
+  <table width="450px">
+  <thead><td><u>Producto</u></td><td align="right"><u>Precio</u></td></thead>
+  <tr *ngFor='let linea of lineas; let i=index'>
+   <td>{{linea[0]}}</td>
+   <td align="right">{{linea[1]}}€</td>
+   <td align="center"><button type='button' (click)='delLinea(i)'>-</button></td>
+  </tr>
+  <tr><td><b>TOTAL</b></td><td align="right"><b>{{importe}}€</b></td></tr>
+  </table>
+  </div>
+  
