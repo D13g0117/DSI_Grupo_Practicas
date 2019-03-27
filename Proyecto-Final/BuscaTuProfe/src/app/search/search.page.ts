@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../servicios/auth.service'
 
 @Component({
   selector: 'app-search',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPage implements OnInit {
 
-  constructor() { }
-
+  constructor(public authservice: AuthService) { }
+  Onlogout(){
+    this.authservice.logout();
+    
+  }
   ngOnInit() {
   }
 

@@ -5,9 +5,13 @@
 </ion-header>
 
 <ion-content>
+  <!--Boton de logout-->
+  <ion-button (click)="Onlogout()">Cerrar Sesion</ion-button>
+
+
   <ion-list lines="none">
     <ion-list-header>
-      <ion-label><button routerLink="/teacher-profile" class="bt_inicio">CONTACTAR</button></ion-label>
+      <ion-label><ion-button routerLink="/teacher-profile" class="bt_inicio">CONTACTAR</ion-button></ion-label>
     </ion-list-header>
   </ion-list>
   
