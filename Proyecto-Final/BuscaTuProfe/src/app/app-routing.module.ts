@@ -21,7 +21,8 @@ const routes: Routes = [
   { path: 'search', loadChildren: './search/search.module#SearchPageModule' , canActivate: [ AuthGuard]},
   { path: 'teacher-profile', loadChildren: './teacher-profile/teacher-profile.module#TeacherProfilePageModule' , canActivate: [ AuthGuard]},
   { path: 'student-profile', loadChildren: './student-profile/student-profile.module#StudentProfilePageModule' , canActivate: [ AuthGuard]},
-  { path: 'chat', loadChildren: './chat/chat.module#ChatPageModule' , canActivate: [ AuthGuard]}
+  { path: 'chat', loadChildren: './chat/chat.module#ChatPageModule' , canActivate: [ AuthGuard]},  { path: 'registrar', loadChildren: './registrar/registrar.module#RegistrarPageModule' }
+
 
 ];
 

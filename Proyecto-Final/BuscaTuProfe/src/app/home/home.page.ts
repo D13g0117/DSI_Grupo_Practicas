@@ -21,4 +21,8 @@ export class HomePage implements OnInit{
     } ).catch(err => alert('No existe el usuario datos incorrectos'))
     
   }
+  OnRegister(){
+      this.router.navigate(['/registrar']);
+    
+  }
 }
