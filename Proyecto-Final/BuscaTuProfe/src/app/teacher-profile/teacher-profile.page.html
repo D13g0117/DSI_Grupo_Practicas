@@ -1,13 +1,14 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>Perfil de "X"</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list lines="none">
-    <ion-list-header>
-      <ion-label><button routerLink="/chat" class="bt_inicio">Chat</button></ion-label>
-    </ion-list-header>
+      <ion-button expand = "block" routerLink="/chat" class="bt_inicio">Chat</ion-button>
   </ion-list>
 </ion-content>

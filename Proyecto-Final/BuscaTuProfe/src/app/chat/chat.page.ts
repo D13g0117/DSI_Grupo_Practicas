@@ -33,7 +33,6 @@ export class ChatPage implements OnInit {
       component:  ConversacionComponent,
       componentProps : {
         chat: chat
-
       }
     }).then( (modal)=> modal.present())
 

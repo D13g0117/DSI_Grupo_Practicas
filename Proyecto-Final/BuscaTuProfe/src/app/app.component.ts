@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { AuthService } from './servicios/auth.service'
 
 @Component({
   selector: 'app-root',
@@ -11,23 +12,33 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Home',
-      url: '/home',
-      icon: 'home'
+      title: 'Buscar',
+      url: '/search',
+      icon: 'ios-search'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Perfil',
+      url: '/teacher-profile',
+      icon: 'contact'
+    },
+    {
+      title: 'Conversaciones',
+      url: '/chat',
+      icon: 'ios-chatbubbles'
     }
   ];
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    public authservice: AuthService
   ) {
     this.initializeApp();
+  }
+
+  Onlogout(){
+    this.authservice.logout();
   }
 
   initializeApp() {
