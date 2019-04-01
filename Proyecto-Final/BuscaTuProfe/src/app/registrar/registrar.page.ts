@@ -9,21 +9,35 @@ import { Router } from "@angular/router";
 })
 export class RegistrarPage implements OnInit {
 
+  
   constructor(private afauth : AngularFireAuth, public router: Router) { }
-
+  
+  checked: boolean;
   email: string;
   password: string;
   ngOnInit() {
   }
   async OnRegister(){
+    if (this.checked == true){
+      try{
+        const result = await this.afauth.auth.createUserWithEmailAndPassword(this.email, this.password);
+        console.log(result);
+        
+        this.router.navigate(['/editar-teacher-profile']);
+      }catch(e){
+        
+        alert(e.message);
+      }
+    }else{
     try{
       const result = await this.afauth.auth.createUserWithEmailAndPassword(this.email, this.password);
       console.log(result);
-      this.router.navigate(['/editar-teacher-profile']);
+      this.router.navigate(['/search']);
     }catch(e){
       
       alert(e.message);
     }
+  }
 
   }
 

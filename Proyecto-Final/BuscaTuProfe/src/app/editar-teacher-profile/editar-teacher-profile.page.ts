@@ -15,19 +15,18 @@ import { Todo, TodoService } from '../servicios/todo.service';
 })
 export class EditarTeacherProfilePage implements OnInit {
 
-  profile = {} as perfil_teacher;
+
 
   todo: Todo = {
-    id: '',
-    name: 'string',
-    firstName: 'string',
-    biografia: 'string',
-    detalles: 'string',
-    asignatura: 'string',
-    pago: 'string',
-    precio: 'string',
-    img: 'string',
-    localidad: 'string'
+  name:  "",
+  firstName: "",
+  biografia :  "",
+  detalles : "",
+  asignatura : "",
+  pago:  "",
+  precio:  "",
+  img: "",
+  localidad:  ""
   }
 
   todoId = null;
@@ -63,6 +62,7 @@ export class EditarTeacherProfilePage implements OnInit {
       //content: 'Guardando perfil...'
     });
     await loading.present();*/
+
 
     if(this.todoId){
       this.todoService.updateTodo(this.todo, this.todoId).then(() =>{

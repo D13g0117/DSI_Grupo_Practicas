@@ -21,7 +21,7 @@
           <ion-list>
               <ion-item >
                 <ion-label>Profesor</ion-label>
-                <ion-checkbox slot="end"></ion-checkbox>
+                <ion-checkbox slot="end" [(ngModel)]="checked"></ion-checkbox>
               </ion-item>
           </ion-list>
           <ion-button expand = "block" (click)="OnRegister()">  Registrarse </ion-button>

@@ -7,7 +7,6 @@ import { Identifiers } from '@angular/compiler';
 
 
 export interface Todo{
-  id:string
   name: string
   firstName:string
   biografia : string
@@ -27,7 +26,7 @@ export class TodoService {
 
   private todos: Observable<Todo[]>
   constructor(db: AngularFirestore) {
-    this.todosCollection = db.collection<Todo>('perfileRooms');
+    this.todosCollection = db.collection<Todo>('perfilRooms');
     this.todos = this.todosCollection.snapshotChanges().pipe(
       map(actions =>{
         return actions.map(a => {
