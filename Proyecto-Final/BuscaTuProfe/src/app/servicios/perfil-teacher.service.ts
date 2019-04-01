@@ -20,6 +20,9 @@ export interface perfil_teacher{
 export class PerfilTeacherService {
 
   constructor( private db : AngularFirestore) { }
+  
+  
+
   getChatRooms(){
     
     return this.db.collection('perfilRooms').snapshotChanges().pipe(map(rooms => {
