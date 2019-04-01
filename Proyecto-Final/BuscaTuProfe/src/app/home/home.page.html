@@ -1,16 +1,10 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      INICIO DE SESION
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app id="back" >
 
-<ion-content>
-    
+<ion-content >
+		<h1>BUSCA TU PROFE</h1>
+		<h4>Aprende y disfruta</h4>
+
+	<div id="loading">
 	<ion-item>
 	<ion-label position = "floating"> Correo electronico: </ion-label>
 	<ion-input type = "text" name = "email" [(ngModel)]="email"></ion-input>
@@ -20,9 +14,13 @@
 	<ion-label position = "floating"> Contrase&ntilde;a: </ion-label>
 	<ion-input type = "password" name = "password"  [(ngModel)]="password"></ion-input>
 	</ion-item>
+	</div>
+	<p id="forgot">Olvidaste la contraseña</p>
 	<br>
-	<ion-button expand = "block" (click)="OnSubmitLogin()"> Entrar </ion-button>
-
-	
+	<div id="login">
+	<ion-button expand = "block" (click)="OnSubmitLogin()" id="loginbutton"> Entrar </ion-button>
+	<p> Registrarse </p>
+	</div>
 
 </ion-content>
+</ion-app>

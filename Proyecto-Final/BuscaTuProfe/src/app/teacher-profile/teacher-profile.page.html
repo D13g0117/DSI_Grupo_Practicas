@@ -1,13 +1,42 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Perfil de "X"</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+		NOMBRE DEL PROFESOR
+    </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <ion-list lines="none">
-    <ion-list-header>
-      <ion-label><button routerLink="/chat" class="bt_inicio">Chat</button></ion-label>
-    </ion-list-header>
-  </ion-list>
+<ion-content>
+	<ion-list lines="none">
+		<ion-item>
+			<h1>Biografia</h1>
+		</ion-item>
+		<ion-item>
+		<ion-label> Lorem ipsum </ion-label>
+		</ion-item>
+		<ion-item>
+			<h1>Detalles</h1>
+		</ion-item>
+		<ion-item>
+			<ion-label> Lorem ipsum </ion-label>
+		</ion-item>
+		<ion-item>
+			<h1>Asignaturas</h1>
+		</ion-item>
+		<ion-item>
+			<ion-label> Lorem ipsum </ion-label>
+		</ion-item>
+		<ion-item>
+			<h1>Formas de Pago</h1>
+		</ion-item>
+		<ion-item>
+			<ion-label> Lorem ipsum </ion-label>
+		</ion-item>
+	</ion-list>
+	<ion-button expand = "block" (click)="OnSubmitLogin()"> Contactar </ion-button>
+
+</ion-content>
 </ion-content>

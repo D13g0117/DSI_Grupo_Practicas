@@ -1,9 +1,36 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>studentProfile</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+		NOMBRE DEL ESTUDIANTE
+    </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
+	<ion-list lines="none">>
+		<ion-item>
+			<ion-label> Nombre: </ion-label>
+		</ion-item>
+		<ion-item>
+			<ion-label> Apellidos: </ion-label>
+		</ion-item>
+		<ion-item>
+			<ion-label> Fecha de nacimiento: </ion-label>
+		</ion-item>
+		<ion-item>
+			<ion-label> Dirección: </ion-label>
+		</ion-item>
+		<ion-item>
+			<ion-label> Teléfono: </ion-label>
+		</ion-item>
+	</ion-list>
+	<ion-grid style="height: 20%">
+		<ion-row justify-content-center align-items-center style="height: 100%">
+			Cambiar Contraseña
+		</ion-row>
+	</ion-grid>
+	<ion-button expand = "block" (click)="OnSubmitLogin()"> Editar Información </ion-button>
 
 </ion-content>

@@ -1,4 +1,78 @@
-.welcome-card ion-img {
-  max-height: 35vh;
-  overflow: hidden;
+
+h1{
+position: absolute;
+width: 220px;
+height: 150px;
+left: calc(50% - 220px/2 - 9.14px);
+top: 100px;
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: normal;
+text-align: center;
+
+color: #FF4949;
 }
+
+h4{
+  position: absolute;
+  width: 226px;
+  height: 42px;
+  left: calc(50% - 226px/2 - 5.14px);
+  top: 200px;
+  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: normal;
+  text-align: center;
+}
+
+#loading{
+position: absolute;
+width: 250px;
+height: 84px;
+top:250px;
+left: calc(50% - 220px/2 - 9.14px);
+}
+
+#login{
+position: absolute;
+left: calc(50% - 220px/2 - 9.14px);
+right: 0.36px;
+bottom: 140px;
+}
+
+#loginbutton{
+width: 250px;
+height: 42px;
+}
+
+#back{
+
+position: absolute;
+width: 428px;
+height: 713px;
+left: -51px;
+top: -30px;
+}
+
+#forgot{
+  position: absolute;
+width: 250px;
+height: 24px;
+right: 60px;
+top:380px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: normal;
+text-align: right;
+}
+ion-content {
+  --background:url(libro-veneno-codigo--930x600.png);
+  }
