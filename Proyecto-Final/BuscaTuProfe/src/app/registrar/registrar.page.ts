@@ -19,8 +19,9 @@ export class RegistrarPage implements OnInit {
     try{
       const result = await this.afauth.auth.createUserWithEmailAndPassword(this.email, this.password);
       console.log(result);
-      this.router.navigate(['/home']);
+      this.router.navigate(['/editar-teacher-profile']);
     }catch(e){
+      
       alert(e.message);
     }
 

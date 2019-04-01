@@ -10,7 +10,20 @@
 
 <ion-content>
   <!--Boton de logout-->
-
+  <ion-content padding>
+    <ion-list>
+      <ion-item *ngFor = "let profile of profileRooms">
+          <ion-avatar slot="start">
+              <ion-img [src]="profile.img"></ion-img>
+            </ion-avatar>
+        <ion-label>
+          <h2><b>{{profile.name}} </b></h2>
+          <p>{{profile.precio}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  
+  </ion-content>
   <ion-list lines="none">
       <ion-button expand = "block" routerLink="/teacher-profile" class="bt_inicio">CONTACTAR</ion-button>
     </ion-list>

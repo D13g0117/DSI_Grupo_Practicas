@@ -1,23 +1,31 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="end">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Registrar</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-    <ion-item>
-        <ion-label position = "floating"> Correo electronico: </ion-label>
-        <ion-input type = "text" name = "email" [(ngModel)]="email"></ion-input>
-        </ion-item>
-      
-        <ion-item>
-        <ion-label position = "floating"> Contrase&ntilde;a: </ion-label>
-        <ion-input type = "password" name = "password"  [(ngModel)]="password"></ion-input>
-        </ion-item>
-        <ion-button expand = "block" (click)="OnRegister()"> Registrarse </ion-button>
-
-</ion-content>
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Registrar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+      <ion-item>
+          <ion-label position = "floating"> Correo electronico: </ion-label>
+          <ion-input type = "text" name = "email" [(ngModel)]="email"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+          <ion-label position = "floating"> Contrase&ntilde;a: </ion-label>
+          <ion-input type = "password" name = "password"  [(ngModel)]="password"></ion-input>
+          </ion-item>
+          <ion-list>
+              <ion-item >
+                <ion-label>Profesor</ion-label>
+                <ion-checkbox slot="end"></ion-checkbox>
+              </ion-item>
+          </ion-list>
+          <ion-button expand = "block" (click)="OnRegister()">  Registrarse </ion-button>
+  
+  
+         
+  </ion-content>
