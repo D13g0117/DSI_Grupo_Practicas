@@ -76,7 +76,4 @@ export class EditarTeacherProfilePage implements OnInit {
       });
     }
   }
-
-
-
 }
