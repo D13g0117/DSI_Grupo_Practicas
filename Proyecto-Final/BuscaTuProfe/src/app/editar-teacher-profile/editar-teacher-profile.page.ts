@@ -18,15 +18,15 @@ export class EditarTeacherProfilePage implements OnInit {
 
 
   todo: Todo = {
-  name:  "",
-  firstName: "",
-  biografia :  "",
-  detalles : "",
-  asignatura : "",
-  pago:  "",
-  precio:  "",
-  img: "",
-  localidad:  ""
+    name: "",
+    firstName: "",
+    biografia: "",
+    detalles: "",
+    asignatura: "",
+    pago: "",
+    precio: "",
+    img: "",
+    localidad: ""
   }
 
   todoId = null;
@@ -34,45 +34,45 @@ export class EditarTeacherProfilePage implements OnInit {
     public navCtrl: NavController,
     public router: Router,
     private todoService: TodoService,
-    private route: ActivatedRoute, 
+    private route: ActivatedRoute,
     private loadingController: LoadingController) { }
 
   ngOnInit() {
-      this.todoId = this.route.snapshot.params['id'];
-      if(this.todoId){
-          this.loadTodo();
-      }
+    this.todoId = this.route.snapshot.params['id'];
+    if (this.todoId) {
+      this.loadTodo();
+    }
   }
 
-  async loadTodo(){
+  async loadTodo() {
 
     /*const loading = await this.loadingController.create({
       //content: 'Cargando perfil...'
     });
     await loading.present();*/
-    
-    this.todoService.getTodo(this.todoId).subscribe(res =>{
-     // loading.dismiss();
+
+    this.todoService.getTodo(this.todoId).subscribe(res => {
+      // loading.dismiss();
       this.todo = res;
     })
   }
 
-  async saveTodo(){
+  async saveTodo() {
     /*const loading = await this.loadingController.create({
       //content: 'Guardando perfil...'
     });
     await loading.present();*/
 
 
-    if(this.todoId){
-      this.todoService.updateTodo(this.todo, this.todoId).then(() =>{
-       // loading.dismiss();
-        this.navCtrl.back();
+    if (this.todoId) {
+      this.todoService.updateTodo(this.todo, this.todoId).then(() => {
+        // loading.dismiss();
+        this.router.navigate(['/home']);
       });
-    }else{
-      this.todoService.addTodo(this.todo).then(() =>{
+    } else {
+      this.todoService.addTodo(this.todo).then(() => {
         //loading.dismiss();
-        this.navCtrl.back();
+        this.router.navigate(['/home']);
       });
     }
   }
