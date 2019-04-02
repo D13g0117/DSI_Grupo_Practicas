@@ -49,7 +49,7 @@ export class ChatService {
   }
 
   removeTodo(id) {
-   // console.log(id)
+    
     return this.todosCollection.doc(id).delete();
   }
 }
