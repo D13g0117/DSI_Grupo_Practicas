@@ -26,6 +26,11 @@ export class AppComponent  {
       title: 'Conversaciones',
       url: '/chat',
       icon: 'ios-chatbubbles'
+    },
+	{
+      title: 'FAQ',
+      url: '/faq',
+      icon: 'ios-chatbubbles'
     }
   ];
   todoId = null;
