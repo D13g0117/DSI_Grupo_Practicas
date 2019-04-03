@@ -38,13 +38,9 @@ export class ChatPage implements OnInit {
 
   }
   remove(item) {
-      //console.log(item.$key);
-      //return { id, ...data };
-      console.log(".....................")
-    console.log(item)
-    console.log(".....................")
     this.chatservice.removeTodo(item);
-    console.log("Borrado")
+    
+    
   }
 
 }

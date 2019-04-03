@@ -27,7 +27,6 @@ const routes: Routes = [
   { path: 'editar-teacher-profile', loadChildren: './editar-teacher-profile/editar-teacher-profile.module#EditarTeacherProfilePageModule' , canActivate: [ AuthGuard]},
   { path: 'editar-teacher-profile/:id', loadChildren: './editar-teacher-profile/editar-teacher-profile.module#EditarTeacherProfilePageModule' , canActivate: [ AuthGuard]}
 
-
 ];
 
 @NgModule({

@@ -9,8 +9,8 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item-sliding *ngFor="let chat of chatRooms" (click)="openChat(chat)">
-      <ion-item lines="inset">
+    <ion-item-sliding *ngFor="let chat of chatRooms" >
+      <ion-item (click)="openChat(chat)" lines="inset">
         <ion-avatar slot="start">
           <ion-img [src]="chat.img"></ion-img>
         </ion-avatar>
