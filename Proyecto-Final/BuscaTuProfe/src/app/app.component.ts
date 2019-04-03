@@ -11,6 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: 'app.component.html'
 })
 export class AppComponent  {
+
   public appPages = [
     {
       title: 'Buscar',
@@ -19,7 +20,7 @@ export class AppComponent  {
     },
     {
       title: 'Perfil',
-      url: "['/editar-teacher-profile', profile.id]",
+      url: '/teacher-profile',
       icon: 'contact'
     },
     {
