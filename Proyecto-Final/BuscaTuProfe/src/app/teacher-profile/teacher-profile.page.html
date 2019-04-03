@@ -4,7 +4,7 @@
         <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title text-center>
-		{{todo.name}}
+		{{todo.name}} {{todo.firstName}}
 	</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -15,10 +15,7 @@
 	<ion-list lines="none">
 		<ion-item> 
 			<ion-avatar>
-
-
 				<ion-img [src] = "todo.img"></ion-img>
-
 			</ion-avatar>
 		</ion-item>
 		<ion-item>
