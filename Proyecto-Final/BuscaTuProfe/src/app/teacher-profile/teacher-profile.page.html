@@ -15,46 +15,45 @@
 	<ion-list lines="none">
 		<ion-item> 
 			<ion-avatar>
-<<<<<<< Updated upstream
-			<img src="https://i.stack.imgur.com/SE2cv.jpg">
-=======
+
+
 				<ion-img [src] = "todo.img"></ion-img>
->>>>>>> Stashed changes
+
 			</ion-avatar>
 		</ion-item>
 		<ion-item>
 			<h1>Biografia</h1>
 		</ion-item>
 		<ion-item>
-			<ion-label color= "medium"> {{todo.biografia}} Lorem ipsum</ion-label>
+			<ion-label color= "medium"> {{todo.biografia}}  </ion-label>
 		</ion-item>
 		<ion-item>
 			<h1>Detalles</h1>
 		</ion-item>
 		<ion-item>
-			<ion-label color= "medium"> {{todo.detalles}} Lorem ipsum</ion-label>
+			<ion-label color= "medium"> {{todo.detalles}}  </ion-label>
 		</ion-item>
 		<ion-item>
 			<h1>Asignaturas</h1>
 		</ion-item>
 		<ion-item>
-			<ion-label color= "medium"> {{todo.asignaturas}} Lorem ipsum</ion-label>
+			<ion-label color= "medium"> {{todo.asignaturas}}  </ion-label>
 		</ion-item>
 		<ion-item>
 			<h1>Formas de Pago</h1>
 		</ion-item>
 		<ion-item>
-			<ion-label color= "medium"> {{todo.pago}} Lorem ipsum</ion-label>
+			<ion-label color= "medium"> {{todo.pago}}  </ion-label>
 		</ion-item>
 		<ion-item>
 			<h1>Localidad</h1>
 		</ion-item>
 		<ion-item>
-			<ion-label color= "medium"> {{todo.localidad}} Lorem ipsum</ion-label>
+			<ion-label color= "medium"> {{todo.localidad}}  </ion-label>
 		</ion-item>
 		<ion-item>
 			<h1>Precio: <b>{{todo.precio}}€/hora</b></h1>
 		</ion-item>
 	</ion-list>
-	<ion-button expand = "block" routerLink="/chat" class="bt_inicio">Chat</ion-button>
+	<ion-button expand = "block" routerLink="/chat" class="bt_inicio" (click)= "crearChat()">Chat</ion-button>
 </ion-content>

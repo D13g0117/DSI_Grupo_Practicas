@@ -12,8 +12,8 @@
   <!--Boton de logout-->
   <ion-content padding>
     <ion-list>
-      <ion-item-sliding *ngFor="let profile of profileRooms">
-        <ion-item lines="inset" button [routerLink]="['/teacher-profile', profile.id]">
+      <ion-item *ngFor="let profile of profileRooms" button [routerLink]="['/teacher-profile', profile.id]">
+        <ion-item lines="inset" >
           <ion-avatar slot="start">
             <ion-img [src]="profile.img"></ion-img>
           </ion-avatar>
@@ -22,13 +22,8 @@
             <p>{{ profile.precio }}</p>
           </ion-label>
         </ion-item>
-        <ion-item-options side="end">
-          <ion-item-option (click)="remove(item)" color="secondary">
-            remove
-            <ion-icon name="close" slot="end"></ion-icon>
-          </ion-item-option>
-        </ion-item-options>
-      </ion-item-sliding>
+        
+      </ion-item>
     </ion-list>
 
   </ion-content>

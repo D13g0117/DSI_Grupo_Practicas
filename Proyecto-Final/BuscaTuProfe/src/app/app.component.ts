@@ -23,10 +23,16 @@ export class AppComponent  {
       icon: 'contact'
     },
     {
+      title: 'Editar Perfil',
+      url: '/editar-teacher-profile',
+      icon: 'contact'
+    },
+    {
       title: 'Conversaciones',
       url: '/chat',
       icon: 'ios-chatbubbles'
     },
+    
 	{
       title: 'FAQ',
       url: '/faq',

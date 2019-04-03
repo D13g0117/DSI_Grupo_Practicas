@@ -17,14 +17,6 @@ export class ChatPage implements OnInit {
 
   ngOnInit() {
     this.chatservice.getChatRooms().subscribe(chat =>{
-     /* chat.map(chat =>{
-
-        const data : chat = chat.payload.doc.data() as chat;
-        data.id = chat.payload.doc.id;
-
-        this.chatRooms.push(data);
-         
-      })*/
       this.chatRooms = chat
     })
   }
@@ -38,13 +30,9 @@ export class ChatPage implements OnInit {
 
   }
   remove(item) {
-      //console.log(item.$key);
-      //return { id, ...data };
-      console.log(".....................")
-    console.log(item)
-    console.log(".....................")
+    
     this.chatservice.removeTodo(item);
-    console.log("Borrado")
+    
   }
 
 }

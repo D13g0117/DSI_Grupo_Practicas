@@ -36,7 +36,9 @@ export class TeacherProfilePage implements OnInit {
       this.loadTodo();
     }
   }
-
+  crearChat(){
+    
+  }
   async loadTodo() {
 
     /*const loading = await this.loadingController.create({
