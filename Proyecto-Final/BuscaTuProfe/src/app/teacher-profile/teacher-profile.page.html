@@ -3,40 +3,54 @@
     <ion-buttons slot="end">
         <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Perfil de "X"</ion-title>
+    <ion-title text-center>
+		{{todo.name}}
+	</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
-<ion-content padding>
 
-  <ion-item>
-    <ion-label position="floating">Nombre: {{todo.name}}</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Apellido: {{todo.firstName}}</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Biografia: {{todo.biografia}}</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Detalles: {{todo.detalles}}</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Asignaturas: {{todo.asignaturas}}</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Forma de pago: {{todo.pago}}</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Precio por hora: {{todo.precio}}</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Localidad: {{todo.localidad}}</ion-label>
-  </ion-item>
-
-
-  <ion-list lines="none">
-      <ion-button expand = "block" routerLink="/chat" class="bt_inicio">Chat</ion-button>
-  </ion-list>
+<ion-content>
+	<ion-list lines="none">
+		<ion-item> 
+			<ion-avatar>
+			<img src="https://i.stack.imgur.com/SE2cv.jpg">
+			</ion-avatar>
+		</ion-item>
+		<ion-item>
+			<h1>Biografia</h1>
+		</ion-item>
+		<ion-item>
+			<ion-label color= "medium"> {{todo.biografia}} Lorem ipsum</ion-label>
+		</ion-item>
+		<ion-item>
+			<h1>Detalles</h1>
+		</ion-item>
+		<ion-item>
+			<ion-label color= "medium"> {{todo.detalles}} Lorem ipsum</ion-label>
+		</ion-item>
+		<ion-item>
+			<h1>Asignaturas</h1>
+		</ion-item>
+		<ion-item>
+			<ion-label color= "medium"> {{todo.asignaturas}} Lorem ipsum</ion-label>
+		</ion-item>
+		<ion-item>
+			<h1>Formas de Pago</h1>
+		</ion-item>
+		<ion-item>
+			<ion-label color= "medium"> {{todo.pago}} Lorem ipsum</ion-label>
+		</ion-item>
+		<ion-item>
+			<h1>Localidad</h1>
+		</ion-item>
+		<ion-item>
+			<ion-label color= "medium"> {{todo.localidad}} Lorem ipsum</ion-label>
+		</ion-item>
+		<ion-item>
+			<h1>Precio: <b>{{todo.precio}}€/hora</b></h1>
+		</ion-item>
+	</ion-list>
+	<ion-button expand = "block" routerLink="/chat" class="bt_inicio">Chat</ion-button>
 </ion-content>
