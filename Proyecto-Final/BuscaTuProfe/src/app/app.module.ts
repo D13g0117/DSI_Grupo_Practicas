@@ -14,8 +14,9 @@ import { firebaseConfig } from "../environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule , FirestoreSettingsToken } from "@angular/fire/firestore";
-import { ConversacionComponent } from "./componentes/conversacion/conversacion.component"
-import {FormsModule} from "@angular/forms"
+import { ConversacionComponent } from "./componentes/conversacion/conversacion.component";
+import {FormsModule} from "@angular/forms";
+
 
 @NgModule({
   declarations: [AppComponent, ConversacionComponent],
@@ -27,7 +28,8 @@ import {FormsModule} from "@angular/forms"
     AppRoutingModule,
   AngularFireModule.initializeApp(firebaseConfig), 
   AngularFireAuthModule,
-  AngularFirestoreModule
+  AngularFirestoreModule,
+  AngularFirestoreModule.enablePersistence()
   ],
   providers: [
     StatusBar,
