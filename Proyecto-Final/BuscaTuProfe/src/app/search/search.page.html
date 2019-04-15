@@ -4,26 +4,31 @@
     <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Búsqueda</ion-title>
+    <ion-title>Búscar</ion-title>
     
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
-    <input type="text" [(ngModel)]="searchterm" (keydown)="search($event)">
-    <ul *ngFor="let club of clubs">
-      <li>{{club.name}}</li>
-      <li>{{club.precio}}</li>
-    </ul>
-    <div *ngIf="clubs?.length < 1">
-      <p>Sorry, no clubs found</p>
-    </div>
-  <!--Boton de logout-->
+  <input type="text" [(ngModel)]="searchterm" (keydown)="search($event)">
   
+  <div *ngIf='comprobar()'>
+    <ion-item *ngFor="let club of clubs" button [routerLink]="['/teacher-profile', club.id]">
+      <ion-item lines="inset">
+        <ion-avatar slot="start">
+          <ion-img [src]="club.img"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h2><b>{{ club.name }} </b></h2>
+          <p>{{ club.precio }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-item>
+  </div>
+  <div *ngIf="check()">
     <ion-list>
       <ion-item *ngFor="let profile of profileRooms" button [routerLink]="['/teacher-profile', profile.id]">
-        <ion-item lines="inset" >
+        <ion-item lines="inset">
           <ion-avatar slot="start">
             <ion-img [src]="profile.img"></ion-img>
           </ion-avatar>
@@ -32,11 +37,18 @@
             <p>{{ profile.precio }}</p>
           </ion-label>
         </ion-item>
-        
       </ion-item>
     </ion-list>
+  </div>
 
-  
+  <div *ngIf="clubs?.length < 1 && comprobar()">
+    <p>Sorry, no clubs found</p>
+  </div>
+  <!--Boton de logout-->
+
+
+
+
 
   <ion-list lines="none">
     <ion-button expand="block" routerLink="/teacher-profile" class="bt_inicio">CONTACTAR</ion-button>
