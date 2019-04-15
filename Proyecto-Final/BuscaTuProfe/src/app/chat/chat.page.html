@@ -3,14 +3,15 @@
     <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Mensajes</ion-title>
+    <ion-title text-center>
+      Conversaciones</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list>
     <ion-item-sliding *ngFor="let chat of chatRooms" >
-      <ion-item lines="inset" (click)="openChat(chat)">
+      <ion-item  lines="none" (click)="openChat(chat)">
         <ion-avatar slot="start">
           <ion-img [src]="chat.img"></ion-img>
         </ion-avatar>
