@@ -5,13 +5,39 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Búscar</ion-title>
-    
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <input type="text" [(ngModel)]="searchterm" (keydown)="search($event)">
-  
+  <ion-button (click)='busquedaAvanzada()'>Busqueda avanzada</ion-button>
+  <ion-list id="busquedaAvanzada">
+    <form action="">
+        <input type="radio" name="joke" (click)="desplegable()" /> Asignaturas
+        <select name="OS" id="desplegable" >
+        <option selected value="0"> Asignaturas</option>
+        <option value="1">Lengua</option>
+        <option value="2">Matematicas</option>
+        <option value="3">Ingles</option>
+        <option value="10">Fisica</option>
+        <option value="11">Quimica</option>
+        <option value="12">Frances</option>
+      </select>
+      <input type="radio" name="joke" (click)="cambiarBusqueda()" /> Localizacion
+    </form>
+    <!--<ion-item >
+        <ion-label>Asignatura</ion-label>
+        <ion-checkbox slot="end" [(ngModel)]="checked"></ion-checkbox>
+      </ion-item>
+      <ion-item >
+          <ion-label>Localizacion</ion-label>
+          <ion-checkbox slot="end" [(ngModel)]="checked"></ion-checkbox>
+        </ion-item>
+        -->
+  </ion-list>
+
+
   <div *ngIf='comprobar()'>
     <ion-item *ngFor="let club of clubs" button [routerLink]="['/teacher-profile', club.id]">
       <ion-item lines="inset">
@@ -21,6 +47,7 @@
         <ion-label>
           <h2><b>{{ club.name }} </b></h2>
           <p>{{ club.precio }}</p>
+          <p>{{ club.localidad }}</p>
         </ion-label>
       </ion-item>
     </ion-item>
@@ -35,6 +62,7 @@
           <ion-label>
             <h2><b>{{ profile.name }} </b></h2>
             <p>{{ profile.precio }}</p>
+            <p>{{ profile.localidad }}</p>
           </ion-label>
         </ion-item>
       </ion-item>

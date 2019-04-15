@@ -17,6 +17,8 @@ export class SearchPage implements OnInit {
 
   startAt = new Subject();
   endAt = new Subject();
+  
+  tipoBusqueda= 'name';
 
   clubs;
   allclubs;
@@ -85,11 +87,38 @@ export class SearchPage implements OnInit {
   }
 
   firequery(start, end) {
-    return this.afs.collection('perfilRooms', ref => ref.limit(4).orderBy('name').startAt(start).endAt(end)).valueChanges();
+    return this.afs.collection('perfilRooms', ref => ref.limit(4).orderBy(this.tipoBusqueda).startAt(start).endAt(end)).valueChanges();
   }
 
   getallclubs() {
-    return this.afs.collection('perfilRooms', ref => ref.orderBy('name')).valueChanges();
+    return this.afs.collection('perfilRooms', ref => ref.orderBy(this.tipoBusqueda)).valueChanges();
+  }
+  cambiarBusqueda(){
+    this.tipoBusqueda='localidad';
+  }
+  busquedaAvanzada() {
+    var x = document.getElementById("busquedaAvanzada");
+   
+    if (x.style.display == "none") {
+      x.style.display = "block";
+    } else if(x.style.display == ""){
+      x.style.display = "block";
+    }else {
+      this.tipoBusqueda='name';
+      x.style.display = "none";
+    }
+  }
+  desplegable() {
+    var x = document.getElementById("desplegable");
+   
+    if (x.style.display == "none") {
+      x.style.display = "block";
+    } else if(x.style.display == ""){
+      x.style.display = "block";
+    }else {
+      this.tipoBusqueda='name';
+      x.style.display = "none";
+    }
   }
 
 
