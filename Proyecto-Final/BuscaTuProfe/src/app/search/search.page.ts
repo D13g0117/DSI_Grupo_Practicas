@@ -12,6 +12,7 @@ import { checkAndUpdateBinding } from '@angular/core/src/view/util';
   templateUrl: './search.page.html',
   styleUrls: ['./search.page.scss'],
 })
+
 export class SearchPage implements OnInit {
   searchterm: string;
 
@@ -22,7 +23,7 @@ export class SearchPage implements OnInit {
 
   clubs;
   allclubs;
-
+ 
   startobs = this.startAt.asObservable();
   endobs = this.endAt.asObservable();
   public profileRooms: any = [];
@@ -76,7 +77,11 @@ export class SearchPage implements OnInit {
     return true;
   }
   search($event) {
+    
+    
     let q = $event.target.value;
+    
+    
     if (q != '') {
       this.startAt.next(q);
       this.endAt.next(q + "\uf8ff");
@@ -96,6 +101,7 @@ export class SearchPage implements OnInit {
   cambiarBusqueda(){
     this.tipoBusqueda='localidad';
   }
+  
   busquedaAvanzada() {
     var x = document.getElementById("busquedaAvanzada");
    
@@ -119,6 +125,12 @@ export class SearchPage implements OnInit {
       this.tipoBusqueda='name';
       x.style.display = "none";
     }
+  }
+  firequeryArray(asignatura) {
+    
+    /*let datos =  this.afs.collection('perfilRooms', ref => ref.where('asignatura','array-contains',asignatura ));
+    console.log(datos.get()+"Datos");*/
+    
   }
 
 
