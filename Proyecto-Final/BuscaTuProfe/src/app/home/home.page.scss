@@ -2,3 +2,69 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+#loading{
+  position: relative;
+  width: 250px;
+  font-weight: bold;
+  height: 84px;
+  top:40px;
+  left: calc(18%);
+  right: calc(18%);
+  --background:transparent;
+  }
+  #loading2{
+    position: relative;
+    font-weight: bold;
+    width: 250px;
+    height: 84px;
+    top:40px;
+    left: calc(18%);
+    right: calc(18%);
+    --background:transparent;
+    }
+  h4{
+    position: relative;
+    width: 226px;
+    height: 42px;
+    left: calc(18%);
+    right: calc(18%);
+    top: 40px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  h1{
+    position: relative;
+    width: 220px;
+    height: 150px;
+    left: calc(18%);
+      right: calc(18%);
+    top: 100px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: normal;
+    text-align: center;
+    
+    color: #FF4949;
+    }
+
+    #login{
+      position: relative;
+      top:70px;
+      left: 60px;
+      right: 50px;
+      width: 250px;
+      }
+
+ion-content {
+  --background:url(C:\Users\danie\Desktop\DSI_Grupo_Practicas\Proyecto-Final\BuscaTuProfe\src\app\home\libro-veneno-codigo--930x600.png)no-repeat center center / cover;;
+  }
+
