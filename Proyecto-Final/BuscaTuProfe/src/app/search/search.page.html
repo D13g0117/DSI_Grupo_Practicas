@@ -10,10 +10,10 @@
 </ion-header>
 
 <ion-content>
-  <input type="text" [(ngModel)]="searchterm" (keydown)="search($event)">
-  <ion-button (click)='busquedaAvanzada()'>Busqueda avanzada</ion-button>
+  <input type="text" [(ngModel)]="searchterm" (keydown)="search($event)" id="search" placeholder="Búsqueda">
+  <ion-button (click)='busquedaAvanzada()' id="avanzada">Busqueda avanzada</ion-button>
   <ion-list id="busquedaAvanzada">
-    <form action="">
+    <form action="" id="opciones">
         <input type="radio" name="joke" (click)="desplegable()" /> Asignaturas
 
         <select name="OS" id="desplegable" (change)="firequeryArray('Lengua')">
@@ -82,7 +82,7 @@
 
 
   <ion-list lines="none">
-    <ion-button expand="block" routerLink="/teacher-profile" class="bt_inicio">CONTACTAR</ion-button>
+    <ion-button expand="block" routerLink="/teacher-profile" class="bt_inicio" id="boton">CONTACTAR</ion-button>
   </ion-list>
 
 </ion-content>
