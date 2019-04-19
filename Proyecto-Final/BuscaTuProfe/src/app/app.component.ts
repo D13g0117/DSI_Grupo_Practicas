@@ -26,7 +26,7 @@ export class AppComponent  {
     {
       title: 'Editar Perfil',
       url: '/editar-teacher-profile',
-      icon: 'contact'
+      icon: 'create'
     },
     {
       title: 'Conversaciones',
@@ -37,7 +37,7 @@ export class AppComponent  {
 	{
       title: 'FAQ',
       url: '/faq',
-      icon: 'ios-chatbubbles'
+      icon: 'help'
     }
   ];
   todoId = null;

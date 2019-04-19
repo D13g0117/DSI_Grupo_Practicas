@@ -25,7 +25,5 @@ const routes: Routes = [
 })
 export class SearchPageModule {
 
-
-
  
 }

@@ -2,69 +2,58 @@
   max-height: 35vh;
   overflow: hidden;
 }
-
+ion-input{
+  background-color:rgba(255, 255, 255, 0.219);
+}
 #loading{
   position: relative;
-  width: 250px;
+  width: calc(50%);
+  height: calc(10%);
   font-weight: bold;
-  height: 84px;
-  top:40px;
-  left: calc(18%);
-  right: calc(18%);
+  top:22%;
+  left:25%;
   --background:transparent;
-  }
-  #loading2{
-    position: relative;
-    font-weight: bold;
-    width: 250px;
-    height: 84px;
-    top:40px;
-    left: calc(18%);
-    right: calc(18%);
-    --background:transparent;
-    }
-  h4{
-    position: relative;
-    width: 226px;
-    height: 42px;
-    left: calc(18%);
-    right: calc(18%);
-    top: 40px;
-    
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: normal;
-    text-align: center;
-  }
+}
+h4{
+  position: relative;
+  width: calc(50%);
+  height: calc(10%);
+  left: 25%;
+  top: 21%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: normal;
+  text-align: center;
+  color: rgb(116, 113, 113);
+}
 
-  h1{
-    position: relative;
-    width: 220px;
-    height: 150px;
-    left: calc(18%);
-      right: calc(18%);
-    top: 100px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: normal;
-    text-align: center;
-    
-    color: #FF4949;
-    }
+h1{
+  position: relative;
+  width: calc(50%);
+  height: calc(10%);
+  left: 25%;
+  top: 18%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: normal;
+  text-align: center;
+  color: #FF4949;
+}
 
-    #login{
-      position: relative;
-      top:70px;
-      left: 60px;
-      right: 50px;
-      width: 250px;
-      }
+#login{
+  position: relative;
+  width: calc(50%);
+  height: calc(10%);
+  font-weight: bold;
+  top:24%;
+  left:25%;
+}
 
 ion-content {
-  --background:url(C:\Users\danie\Desktop\DSI_Grupo_Practicas\Proyecto-Final\BuscaTuProfe\src\app\home\libro-veneno-codigo--930x600.png)no-repeat center center / cover;;
+  --background:url(libro-veneno-codigo--930x600.png)no-repeat center center / cover;;
   }
 

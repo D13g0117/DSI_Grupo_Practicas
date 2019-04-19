@@ -10,7 +10,8 @@
 </ion-header>
 
 <ion-content>
-  <input type="text" [(ngModel)]="searchterm" (keydown)="search($event)" id="search" placeholder="Búsqueda">
+  <ion-searchbar  [(ngModel)]="searchterm" (keydown)="search($event)" placeholder="Buscar Profesor">
+  </ion-searchbar>
   <ion-button (click)='busquedaAvanzada()' id="avanzada">Busqueda avanzada</ion-button>
   <ion-list id="busquedaAvanzada">
     <form action="" id="opciones">
@@ -75,14 +76,5 @@
   <div *ngIf="clubs?.length < 1 && comprobar()">
     <p>Sorry, no clubs found</p>
   </div>
-  <!--Boton de logout-->
-
-
-
-
-
-  <ion-list lines="none">
-    <ion-button expand="block" routerLink="/teacher-profile" class="bt_inicio" id="boton">CONTACTAR</ion-button>
-  </ion-list>
 
 </ion-content>
