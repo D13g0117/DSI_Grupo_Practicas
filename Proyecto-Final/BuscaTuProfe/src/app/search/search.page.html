@@ -12,7 +12,7 @@
 <ion-content>
   <ion-searchbar  [(ngModel)]="searchterm" (keydown)="search($event)" placeholder="Buscar Profesor">
   </ion-searchbar>
-  <ion-button (click)='busquedaAvanzada()' id="avanzada">Busqueda avanzada</ion-button>
+  <a (click)='busquedaAvanzada()' id="avanzada">Busqueda avanzada</a>
   <ion-list id="busquedaAvanzada">
     <form action="" id="opciones">
         <input type="radio" name="joke" (click)="desplegable()" /> Asignaturas

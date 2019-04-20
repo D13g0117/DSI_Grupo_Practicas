@@ -1,13 +1,91 @@
 ion-list{
     border-radius: 10px;
     margin: 16px 16px;
-    background : #EFEFEF;
+    background : #FFFFFF;
 }
 ion-item{
-    border-radius:10px;
+    
     margin:20px 20px;
 
 }
 ion-footer{
-    background : #EFEFEF;
+    background : #ffffff;
+    height: 10%;
+}
+
+.box-conversacion{
+    border-radius: 7px;
+    display: table;
+    width: 65%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    margin-left: 5%;
+    margin-bottom: 7px;
+    background : #fce2e3;
+}
+.conversacion{
+    height: 85%;
+    
+    margin: 0 auto;
+    background:#EFEFEF;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    
+}
+.footer{
+    height: 10%;
+    background: #FFFFFF;
+}
+#enviar{
+    float:right;
+    display: inline;
+    background: #FFFFFF;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+.mensaje-input{
+    border-radius: 7px;
+    margin: 0 auto;
+    width: 70%; 
+    height: 80%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    margin-left: 5%;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background:#EFEFEF;
+    
+    
+    
+}
+#icono{
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+    float:right;
+    color:black;
+}
+.titulo{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    color: #FF473A;
+    font-weight: bold;
+    text-align:center;
+    margin-top: 10px;
+}
+#emoji{
+    color:black;
+    float:left;
+    width: 35px;
+    height: 35px;
+    display: inline;
+    vertical-align: middle;
 }
