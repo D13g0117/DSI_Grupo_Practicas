@@ -1,0 +1,72 @@
+.imagenPerfil{
+
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px;
+    height: 150px;
+}
+.avatar{
+    width: 100%;
+    height: 150px;
+}
+.contactar{
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 1rem;
+  align-self: flex-end;
+  background-color: #FFF0EF;
+  border-radius: 10px;
+  text-align: center;
+  -webkit-box-shadow: 3px 0px 16px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 0px 16px -6px rgba(0,0,0,0.75);
+  box-shadow: 3px 0px 16px -6px rgba(0,0,0,0.75);
+  h1{
+    padding-top: 10px;
+  }
+}
+.titulos{
+    font-family: 'Montserrat';
+}
+.logo{
+    float: left;
+    width: 40%;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    font-weight: 800;
+}
+.titulo{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    color: #FF473A;
+    margin-top: 10px;
+}
+h1{
+    font-family: 'Montserrat';
+    font-weight: 800;
+}
+.iconosEditar{
+    padding: 10px;
+    margin-top: 8px;
+}
+.inputs{
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    align-content: center;
+    background-color:  #FFF5F4;
+    border: solid;
+    border-width: 1px;
+
+}
+.botonGuardar{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    align-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Montserrat'
+}
