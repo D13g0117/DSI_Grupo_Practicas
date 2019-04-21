@@ -1,30 +1,25 @@
-<ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="end">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>Registrar</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
+
   <ion-content>
-  
-      <ion-item>
-          <ion-label position = "floating"> Correo electronico: </ion-label>
+    
+    <ion-button expand = "block" id="flecha" routerLink="/home">
+			<ion-icon style="color:white; font-size: 25px" name="arrow-round-back"></ion-icon>
+		</ion-button>
+      <ion-item  class="registro" lines="none">
+          <ion-label position = "floating"> Correo electrónico: </ion-label>
           <ion-input type = "text" name = "email" [(ngModel)]="email"></ion-input>
           </ion-item>
           
-          <ion-item>
+      <ion-item class="registro" lines="none">
           <ion-label position = "floating"> Contrase&ntilde;a: </ion-label>
           <ion-input type = "password" name = "password"  [(ngModel)]="password"></ion-input>
-          </ion-item>
-          <ion-list>
-              <ion-item >
+      </ion-item>
+
+      <ion-item id="profesor" lines="none">
                 <ion-label>Profesor</ion-label>
                 <ion-checkbox slot="end" [(ngModel)]="checked"></ion-checkbox>
-              </ion-item>
-          </ion-list>
-          <ion-button expand = "block" (click)="OnRegister()">  Registrarse </ion-button>
+      </ion-item>
+      
+      <ion-button expand = "block" (click)="OnRegister()">  Registrarse </ion-button>
   
   
          

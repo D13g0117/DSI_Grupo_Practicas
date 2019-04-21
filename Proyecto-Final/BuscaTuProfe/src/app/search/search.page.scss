@@ -14,12 +14,6 @@
     top:5%;
 }
 
-#opciones{
-    position: relative;
-    left:10%;
-    top: 10px;
-}
-
 div{
     position: relative;
     top:10px;
@@ -32,3 +26,63 @@ div{
     left:5%;
     width: 70%;
  }
+
+
+.logo{
+    float: left;
+    width: 40%;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    font-weight: 800;
+}
+.titulo{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    color: #FF473A;
+    margin-top: 10px;
+}
+#avanzada{
+    color: red;
+    text-decoration: underline;
+    text-decoration-color: red;
+    margin-top: 5px;
+    width: 80%;  
+    margin-bottom: 10px;
+    display: block;
+    clear: both;
+    font-family: 'Montserrat';
+}
+.barraBusqueda{
+    color: #FF473A;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 0;
+    font-family: 'Montserrat';
+    
+
+}
+.Buscar{
+    align-self: center;
+    width: 80%;
+    padding: 0;
+    margin-top: 10px;
+    display: block;
+    clear: both;
+}
+.busquedaAvanzada{
+    padding: 10px;
+}
+
+.imagenes{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+}
+
+.usuario{
+    width : 100%;
+}
+.datosUsuario{
+    margin-left: 30%; 
+    width: 100%;
+}
