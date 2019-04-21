@@ -1,0 +1,63 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title text-center>
+        Editar Perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list lines="none">
+    <ion-item>
+        <h2>Nombre</h2>
+      </ion-item>
+      <ion-item>
+          <ion-input [(ngModel)]="todo.name"></ion-input>
+        </ion-item>
+      <ion-item>
+        <h2>Apellidos</h2>
+      </ion-item>
+      <ion-item>
+          <ion-input [(ngModel)]="todo.firstName"></ion-input>
+        </ion-item>
+      <ion-item>
+        <h2>Biografia</h2>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="todo.biografia"></ion-input>
+      </ion-item>
+      <ion-item>
+        <h2>Detalles</h2>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="todo.detalles"></ion-input>
+      </ion-item>
+      <ion-item>
+        <h2>Asignaturas</h2>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="todo.asignaturas"></ion-input>
+      </ion-item>
+      <ion-item>
+        <h2>Formas de Pago</h2>
+      </ion-item>
+      <ion-item>
+          <ion-input [(ngModel)]="todo.pago"></ion-input>
+        </ion-item>
+      <ion-item>
+        <h2>Localidad</h2>
+      </ion-item>
+      <ion-item>
+          <ion-input [(ngModel)]="todo.localidad"></ion-input>
+        </ion-item>
+      <ion-item>
+        <h2>Precio</h2>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="todo.precio"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="block" (click) = "saveTodo()"> Guardar </ion-button>
+  </ion-content>

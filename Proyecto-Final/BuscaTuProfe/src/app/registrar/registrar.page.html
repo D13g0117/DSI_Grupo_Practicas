@@ -3,7 +3,7 @@
     <ion-button fill="clear" routerLink="/home">
         <ion-icon style="color:#FF473A; font-size: 25px" name="arrow-round-back"></ion-icon>
     </ion-button>
-    
+
 
     <form action="#login" class="Form">
         <h1 class="Form-title">BUSCA TU PROFE</h1>
@@ -12,13 +12,10 @@
         <br><br>
         <div class="Form-fields">
             <label for="name" class="Control-label Control-other">Nombre:</label>
-            <input type="text" class="ControlInputOther Control-other"
-                placeholder=" " required>
+            <input type="text" class="ControlInputOther Control-other" placeholder=" " required>
 
             <label for="apellidos" class="Control-label Control-other">Apellidos:</label>
-            <input type="text"  class="ControlInputOther Control-other"
-                placeholder=" " required>
-
+            <input type="text" class="ControlInputOther Control-other" placeholder=" " required>
 
             <input type="email" id="email" name="email" [(ngModel)]="email" class="ControlInput ControlInput--email"
                 placeholder=" " required>
@@ -55,6 +52,12 @@
                 Debe contener al menos 6 caracteres. Lo hacemos por tu seguridad.
             </div>
 
+
+            <ion-item id="profesor" lines="none">
+                <ion-label class="Control-label">Profesor</ion-label>
+                <ion-checkbox slot="end" name = "profesor" [(ngModel)]="checked"></ion-checkbox>
+            </ion-item>
+            <br>
 
             <button type="submit" class="Button Form-submit" (click)="OnRegister()">
                 Confirmar
