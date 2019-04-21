@@ -25,7 +25,9 @@ const routes: Routes = [
   { path: 'chat', loadChildren: './chat/chat.module#ChatPageModule' , canActivate: [ AuthGuard]},
   { path: 'registrar', loadChildren: './registrar/registrar.module#RegistrarPageModule' },
   { path: 'editar-teacher-profile', loadChildren: './editar-teacher-profile/editar-teacher-profile.module#EditarTeacherProfilePageModule' , canActivate: [ AuthGuard]},
-  { path: 'editar-teacher-profile/:id', loadChildren: './editar-teacher-profile/editar-teacher-profile.module#EditarTeacherProfilePageModule' , canActivate: [ AuthGuard]},  { path: 'faq', loadChildren: './faq/faq.module#FaqPageModule' }
+  { path: 'editar-teacher-profile/:id', loadChildren: './editar-teacher-profile/editar-teacher-profile.module#EditarTeacherProfilePageModule' , canActivate: [ AuthGuard]},
+  { path: 'faq', loadChildren: './faq/faq.module#FaqPageModule' },
+  { path: 'teacher-profile-fake', loadChildren: './teacher-profile-fake/teacher-profile-fake.module#TeacherProfileFakePageModule' , canActivate: [ AuthGuard]}
 
 
 

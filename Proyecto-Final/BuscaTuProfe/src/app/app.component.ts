@@ -21,7 +21,7 @@ export class AppComponent  {
     },
     {
       title: 'Perfil',
-      url: '/teacher-profile',
+      url: '/teacher-profile-fake',
       icon: 'contact'
     },
     {
