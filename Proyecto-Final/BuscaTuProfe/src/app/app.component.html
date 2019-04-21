@@ -1,21 +1,22 @@
 <ion-app>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat: 400, 700, 800' rel='stylesheet'>
   <ion-split-pane>
 
     <ion-menu>
-      <ion-content>
-        <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+      <ion-content class="fondo">
+        <ion-list class="fondo">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages" class="fondo">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" class="fondo">
+              <ion-icon slot="start" [name]="p.icon" class="fondo icono"></ion-icon>
               <ion-label>
                 {{p.title}}
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
 
-          <ion-menu-toggle auto-hide="false">
-            <ion-item [routerDirection]="" [routerLink]="">
-              <ion-icon slot="start" name="exit"></ion-icon>
+          <ion-menu-toggle auto-hide="false" class="fondo">
+            <ion-item [routerDirection]="" [routerLink]="" class="fondo">
+              <ion-icon slot="start" name="exit" class="fondo icono"></ion-icon>
               <ion-label (click)="Onlogout()">
                 Cerrar Sesion
               </ion-label>
