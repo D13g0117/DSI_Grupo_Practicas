@@ -114,9 +114,9 @@ export class SearchPage implements OnInit {
       x.style.display = "none";
     }
   }
+
   desplegable() {
     var x = document.getElementById("desplegable");
-   
     if (x.style.display == "none") {
       x.style.display = "block";
     } else if(x.style.display == ""){

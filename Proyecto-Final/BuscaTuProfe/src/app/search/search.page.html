@@ -1,68 +1,75 @@
 <ion-header>
 
   <ion-toolbar>
+    <ion-title class="logo">BUSCA <br>TU <br> PROFE </ion-title>
+    <ion-title class="titulo">Búsqueda</ion-title>
     <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Búscar</ion-title>
-
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-searchbar  [(ngModel)]="searchterm" (keydown)="search($event)" placeholder="Buscar Profesor">
-  </ion-searchbar>
-  <ion-button (click)='busquedaAvanzada()' id="avanzada">Busqueda avanzada</ion-button>
-  <ion-list id="busquedaAvanzada">
-    <form action="" id="opciones">
-        <input type="radio" name="joke" (click)="desplegable()" /> Asignaturas
+  <div class="Buscar">
+    <ion-searchbar [(ngModel)]="searchterm" (keydown)="search($event)" placeholder="Buscar Profesor"
+      class="barraBusqueda">
+    </ion-searchbar>
+    <a (click)='busquedaAvanzada()' id="avanzada">Busqueda avanzada</a>
+  </div>
 
-        <select name="OS" id="desplegable" (change)="firequeryArray('Lengua')">
-        <option selected value="0" > Asignaturas</option>
-        <option value="1" >Lengua</option>
-        <option value="2" >Matematicas</option>
-        <option value="3" >Ingles</option>
-        <option value="10" >Fisica</option>
-        <option value="11" >Quimica</option>
-        <option value="12" >Frances</option>
-      </select>
-      <input type="radio" name="joke" (click)="cambiarBusqueda()" /> Localizacion
-    </form>
-    <!--<ion-item >
-        <ion-label>Asignatura</ion-label>
-        <ion-checkbox slot="end" [(ngModel)]="checked"></ion-checkbox>
-      </ion-item>
-      <ion-item >
-          <ion-label>Localizacion</ion-label>
-          <ion-checkbox slot="end" [(ngModel)]="checked"></ion-checkbox>
+  <div>
+    <ion-list id="busquedaAvanzada">
+      <ion-radio-group>
+        <ion-item>
+          <ion-label>Asignaturas</ion-label>
+          <ion-radio slot="start" value="biff" (click)="desplegable()"></ion-radio>
         </ion-item>
-        -->
-  </ion-list>
 
+        <ion-item id="desplegable">
+          <ion-select placeholder="Selecciona una asignatura">
+            <ion-select-option value="l">Lengua</ion-select-option>
+            <ion-select-option value="m">Matematicas</ion-select-option>
+            <ion-select-option value="i">Ingles</ion-select-option>
+            <ion-select-option value="f">Fisica</ion-select-option>
+            <ion-select-option value="q">Quimica</ion-select-option>
+            <ion-select-option value="fr">Frances</ion-select-option>
+          </ion-select>
+        </ion-item>
 
+        <ion-item>
+          <ion-label>Localizacion</ion-label>
+          <ion-radio slot="start" value="griff" (click)="cambiarBusqueda()"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </div>
+
+  
   <div *ngIf='comprobar()'>
-    <ion-item *ngFor="let club of clubs" button [routerLink]="['/teacher-profile', club.id]">
-      <ion-item lines="inset">
-        <ion-avatar slot="start">
-          <ion-img [src]="club.img"></ion-img>
-        </ion-avatar>
-        <ion-label>
-          <h2><b>{{ club.name }} </b></h2>
-          <p>{{ club.precio }}</p>
-          <p>{{ club.localidad }}</p>
-          <p>{{ club.asignaturas }}</p>
-        </ion-label>
+    <ion-list>
+      <ion-item *ngFor="let club of clubs" button [routerLink]="['/teacher-profile', club.id]">
+        <ion-item lines="none" class="usuario">
+          <ion-avatar class="imagenes" slot="start">
+            <ion-img [src]="club.img"></ion-img>
+          </ion-avatar>
+          <ion-label class="datosUsuario">
+            <h2><b>{{ club.name }} </b></h2>
+            <p>{{ club.precio }}</p>
+            <p>{{ club.localidad }}</p>
+            <p>{{ club.asignaturas }}</p>
+          </ion-label>
+        </ion-item>
       </ion-item>
-    </ion-item>
+    </ion-list>
   </div>
   <div *ngIf="check()">
     <ion-list>
       <ion-item *ngFor="let profile of profileRooms" button [routerLink]="['/teacher-profile', profile.id]">
-        <ion-item lines="inset">
-          <ion-avatar slot="start">
+        <ion-item lines="none" class="usuario">
+          <ion-avatar class="imagenes" slot="start">
             <ion-img [src]="profile.img"></ion-img>
           </ion-avatar>
-          <ion-label>
+          <ion-label class="datosUsuario">
             <h2><b>{{ profile.name }} </b></h2>
             <p>{{ profile.precio }}</p>
             <p>{{ profile.localidad }}</p>
