@@ -10,7 +10,7 @@
 
 
 
-<ion-content padding>
+<ion-content padding >
   <ion-list class="ion-item-border">
     <ion-item-sliding *ngFor="let chat of chatRooms"  >
       <ion-item (click)="openChat(chat)" lines="none" class="ion-item-sliding">
@@ -31,7 +31,11 @@
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
-    <img src="https://firebasestorage.googleapis.com/v0/b/buscatuprofe-2d148.appspot.com/o/mas.png?alt=media&token=f5257ede-a382-4503-8a4c-3349942c2584" id="mas"  >
   </ion-list>
-  
+
+  <div class = "contactar">     
+      <button class= "mas">
+          <img src="https://firebasestorage.googleapis.com/v0/b/buscatuprofe-2d148.appspot.com/o/mas.png?alt=media&token=f5257ede-a382-4503-8a4c-3349942c2584"   >
+      </button>
+  </div>
 </ion-content>

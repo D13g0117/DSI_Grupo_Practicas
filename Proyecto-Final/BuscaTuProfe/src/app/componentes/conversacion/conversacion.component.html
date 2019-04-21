@@ -1,15 +1,14 @@
-
 <ion-header>
-    <ion-toolbar>
-        <ion-button slot="start" fill="clear" (click)="closeChat()">
-            <ion-icon style="color:rgb(243, 165, 165); font-size: 25px" name="arrow-round-back"></ion-icon>
-          </ion-button>
-      <ion-title class="titulo">{{chat.name}}</ion-title>
-      <ion-buttons slot="end">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" fill="clear" (click)="closeChat()">
+      <ion-icon style="color:rgb(243, 165, 165); font-size: 25px" name="arrow-round-back"></ion-icon>
+    </ion-button>
+    <ion-title class="logo">BUSCA <br>TU <br> PROFE </ion-title>
+    <ion-title class="titulo">{{chat.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
 
 <ion-content lines="none">
 
@@ -21,7 +20,7 @@
 </ion-content>
 
 <ion-footer class="footer" lines="none">
-  <ion-textarea [(ngModel)]="msg" class="mensaje-input" placeholder="Escribe un mensaje" >
+  <ion-textarea [(ngModel)]="msg" class="mensaje-input" placeholder="Escribe un mensaje">
     <ion-icon id="emoji" name="happy" color="vibrant"></ion-icon>
   </ion-textarea>
   <div id="enviar">

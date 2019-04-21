@@ -37,13 +37,7 @@ ion-content{
     margin: 0 auto;
     
 }
-#mas{
-    width : 50px ; 
-    height : 50px;
-    float: right;
-    margin-top: 99%;
-    margin-bottom: 1%;
-}
+
 .logo{
     float: left;
     width: 40%;
@@ -57,3 +51,17 @@ ion-content{
     color: #FF473A;
     margin-top: 10px;
 }
+.mas{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;  
+
+}
+.contactar{
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 1rem;
+    align-self: flex-end;
+    text-align: right;
+
+  }
