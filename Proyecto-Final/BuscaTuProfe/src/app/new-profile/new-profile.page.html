@@ -11,20 +11,16 @@
 
 <ion-content>
   <ion-list lines="none">
-
     <ion-item>
-      <ion-avatar class="avatar">
-        <input type="file" accept="=.png, .jpg" (change)="onUpload($event)">
-        <ion-img
-          src="https://firebasestorage.googleapis.com/v0/b/buscatuprofe-2d148.appspot.com/o/perfilenblanco.jpg?alt=media&token=24381d68-7139-4565-95c9-c56eddf0a369"
-          class="imagenPerfil"></ion-img>
-      </ion-avatar>
+      <h1>Imagen de Perfil</h1>
+    </ion-item>
+    <ion-item >
+      <input  type="file" accept="=.png, .jpg" (change)="onUpload($event)">
       <ng-template #btnDisabled>
         <ion-button disabled="true" class="botonGuardar" expand="block" (click)="saveTodo()"> Guardar </ion-button>
       </ng-template>
     </ion-item>
-    
-    
+
     <ion-item>
       <h1>Nombre</h1>
     </ion-item>
@@ -72,9 +68,9 @@
     </ion-item>
     <ion-item>
       <ion-input type="text" class="inputs" [(ngModel)]="todo.precio"></ion-input>
-      <ion-input text="text" [value]="urlImage | async" [(ngModel)]="todo.img"></ion-input>
+      <ion-input style="display:none" text="text" [value]="urlImage | async" [(ngModel)]="todo.img"></ion-input>
     </ion-item>
   </ion-list>
-  <ion-button type="disabled" *ngIf="urlImage | async; else btnDisabled" class="botonGuardar" expand="block" (click)="saveTodo()">
+  <ion-button *ngIf="urlImage | async; else btnDisabled" class="botonGuardar" expand="block" (click)="saveTodo()">
     Guardar </ion-button>
 </ion-content>
