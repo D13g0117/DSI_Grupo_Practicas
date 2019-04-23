@@ -30,8 +30,11 @@ export class ConversacionComponent implements OnInit {
       type : 'text',
       date : new Date()
     }
+    if(this.msg == undefined || this.msg == "" ){
 
-    this.chatService.sendMsgToFirebase(mensaje, this.chat.id);
-    this.msg ="";
+    }else{
+      this.chatService.sendMsgToFirebase(mensaje, this.chat.id);
+      this.msg ="";
+    }
   }
 }

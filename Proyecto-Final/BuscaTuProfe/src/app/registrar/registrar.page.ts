@@ -18,12 +18,13 @@ export class RegistrarPage implements OnInit {
   ngOnInit() {
   }
   async OnRegister(){
+    console.log(this.checked);
     if (this.checked == true){
+
       try{
         const result = await this.afauth.auth.createUserWithEmailAndPassword(this.email, this.password);
         console.log(result);
-        
-        this.router.navigate(['/editar-teacher-profile']);
+        this.router.navigate(['/new-profile']);
       }catch(e){
         
         alert(e.message);

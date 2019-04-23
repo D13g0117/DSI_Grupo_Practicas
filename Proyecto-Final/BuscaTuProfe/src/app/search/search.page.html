@@ -1,39 +1,87 @@
 <ion-header>
 
   <ion-toolbar>
+    <ion-title class="logo">BUSCA <br>TU <br> PROFE </ion-title>
+    <ion-title class="titulo">Búsqueda</ion-title>
     <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Búsqueda</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <!--Boton de logout-->
-  <ion-content padding>
-    <ion-list>
-      <ion-item-sliding *ngFor="let profile of profileRooms">
-        <ion-item lines="inset" button [routerLink]="['/editar-teacher-profile', profile.id]">
-          <ion-avatar slot="start">
-            <ion-img [src]="profile.img"></ion-img>
+  <div class="Buscar">
+    <ion-searchbar [(ngModel)]="searchterm" (keydown)="search($event)" placeholder="Buscar Profesor"
+      class="barraBusqueda">
+    </ion-searchbar>
+    <a (click)='busquedaAvanzada()' id="avanzada">Busqueda avanzada</a>
+  </div>
+
+  <div>
+    <ion-list id="busquedaAvanzada">
+      <ion-radio-group>
+        <ion-item>
+          <ion-label>Asignaturas</ion-label>
+          <ion-radio slot="start" value="biff" (click)="desplegable()"></ion-radio>
+        </ion-item>
+
+        <ion-item id="desplegable">
+          <ion-select placeholder="Selecciona una asignatura">
+            <ion-select-option value="l">Lengua</ion-select-option>
+            <ion-select-option value="m">Matematicas</ion-select-option>
+            <ion-select-option value="i">Ingles</ion-select-option>
+            <ion-select-option value="f">Fisica</ion-select-option>
+            <ion-select-option value="q">Quimica</ion-select-option>
+            <ion-select-option value="fr">Frances</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Localizacion</ion-label>
+          <ion-radio slot="start" value="griff" (click)="cambiarBusqueda()"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </div>
+
+  
+  <ion-item style="padding: 0" *ngIf='comprobar()'>
+    <ion-list style="padding: 0;width: 100%">
+      <ion-item *ngFor="let club of clubs" button [routerLink]="['/teacher-profile', '1tJZGABcq3Nqb2m8TtrJ']">
+        <ion-item lines="none" class="usuario">
+          <ion-avatar class="imagenes" slot="start">
+            <ion-img [src]="club.img"></ion-img>
           </ion-avatar>
-          <ion-label>
-            <h2><b>{{profile.name}} </b></h2>
-            <p>{{profile.precio}}</p>
+          <ion-label class="datosUsuario">
+            <h2><b>{{ club.name }} </b></h2>
+            <p>{{ club.precio }}</p>
+            <p>{{ club.localidad }}</p>
+            <p>{{ club.asignaturas }}</p>
           </ion-label>
         </ion-item>
-        <ion-item-options side="end">
-          <ion-item-option (click)="remove(item)" color="secondary">
-            remove
-            <ion-icon name="close" slot="end"></ion-icon>
-          </ion-item-option>
-        </ion-item-options>
-      </ion-item-sliding>
+      </ion-item>
     </ion-list>
+  </ion-item>
+  <ion-item style="padding: 0" *ngIf="check()">
+    <ion-list style="width: 100%;padding: 0">
+      <ion-item *ngFor="let profile of profileRooms" button [routerLink]="['/teacher-profile', profile.id]">
+        <ion-item lines="none" class="usuario">
+          <ion-avatar class="imagenes" slot="start">
+            <ion-img [src]="profile.img"></ion-img>
+          </ion-avatar>
+          <ion-label class="datosUsuario">
+            <h2><b>{{ profile.name }} </b></h2>
+            <p>{{ profile.precio }}</p>
+            <p>{{ profile.localidad }}</p>
+            <p>{{ profile.asignaturas}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-item>
+    </ion-list>
+  </ion-item>
 
-  </ion-content>
-  <ion-list lines="none">
-    <ion-button expand="block" routerLink="/teacher-profile" class="bt_inicio">CONTACTAR</ion-button>
-  </ion-list>
+  <div *ngIf="clubs?.length < 1 && comprobar()">
+    <p>Sorry, no clubs found</p>
+  </div>
 
 </ion-content>

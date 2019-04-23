@@ -10,6 +10,7 @@
     width: 100%;
     height: 150px;
 }
+
 .contactar{
   position: -webkit-sticky;
   position: sticky;
@@ -48,4 +49,35 @@ h1{
 .iconosEditar{
     padding: 10px;
     margin-top: 8px;
+}
+.inputs{
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    align-content: center;
+    background-color:  #FFF5F4;
+    border: solid;
+    border-width: 1px;
+
+}
+.botonGuardar{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    align-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Montserrat'
+}
+
+input[type="file"]::-webkit-file-upload-button{
+    padding: 10px;
+    color :#fff;
+    background-color: #FF473A;
+    border: none;
+    font-family: 'Montserrat';
+    font-size: 20;
+    border-radius: 5px;
 }

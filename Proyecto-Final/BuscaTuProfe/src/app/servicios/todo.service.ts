@@ -6,15 +6,15 @@ import { map } from 'rxjs/operators';
 import { Identifiers } from '@angular/compiler';
 
 
-export interface Todo{
+export interface Todo {
   name: string
-  firstName:string
-  biografia : string
-  detalles :string
-  asignatura : string
+  firstName: string
+  biografia: string
+  detalles: string
+  asignatura: string
   pago: string
   precio: string
-  img:string
+  img: string
   localidad: string
 }
 
@@ -28,29 +28,29 @@ export class TodoService {
   constructor(db: AngularFirestore) {
     this.todosCollection = db.collection<Todo>('perfilRooms');
     this.todos = this.todosCollection.snapshotChanges().pipe(
-      map(actions =>{
+      map(actions => {
         return actions.map(a => {
           const data = a.payload.doc.data();
           const id = a.payload.doc.id;
-          return {id, ...data};
+          return { id, ...data };
         });
       })
     );
-   }
+  }
 
-   getTodos(){
-     return this.todos;
-   }
-   getTodo(id){
+  getTodos() {
+    return this.todos;
+  }
+  getTodo(id) {
     return this.todosCollection.doc<Todo>(id).valueChanges();
   }
-  updateTodo(todo: Todo, id: string){
+  updateTodo(todo: Todo, id: string) {
     return this.todosCollection.doc(id).update(todo);
   }
-  addTodo(todo: Todo){
+  addTodo(todo: Todo) {
     return this.todosCollection.add(todo);
   }
-  removeTodo(id){
+  removeTodo(id) {
     return this.todosCollection.doc(id).delete();
   }
 }

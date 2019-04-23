@@ -1,0 +1,41 @@
+
+ion-list{
+    margin: 16px 16px;
+    background: #FF8F8F;
+    border-radius: 10px;
+}
+
+ion-item{
+    margin:20px 20px;
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    --background: #FF8F8F;
+}
+ion-searchbar{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: normal;
+    color: #FF473A;
+    border:#FF473A;
+}
+#busca{
+    width: 70%;
+    float: center;
+}
+.logo{
+    float: left;
+    width: 40%;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    font-weight: 800;
+}
+.titulo{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    color: #FF473A;
+    margin-top: 10px;
+}

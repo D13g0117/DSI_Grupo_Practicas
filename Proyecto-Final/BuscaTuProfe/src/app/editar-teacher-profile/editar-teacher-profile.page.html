@@ -1,47 +1,133 @@
 <ion-header>
   <ion-toolbar>
+    <ion-title class="logo">BUSCA <br>TU <br> PROFE </ion-title>
+    <ion-title class="titulo">Editar Perfil</ion-title>
     <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Editar Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content overflow-scroll="true" sticky>
 
-  <ion-item>
-    <ion-label position="floating">Nombre:</ion-label>
-    <ion-input [(ngModel)]="todo.name"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Apellido:</ion-label>
-    <ion-input [(ngModel)]="todo.firstName"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Biografia:</ion-label>
-    <ion-input [(ngModel)]="todo.biografia"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Detalles:</ion-label>
-    <ion-input [(ngModel)]="todo.detalles"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Asignaturas:</ion-label>
-    <ion-input [(ngModel)]="todo.asignaturas"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Forma de pago:</ion-label>
-    <ion-input [(ngModel)]="todo.pago"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Precio por hora:</ion-label>
-    <ion-input [(ngModel)]="todo.precio"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Localidad:</ion-label>
-    <ion-input [(ngModel)]="todo.localidad"></ion-input>
-  </ion-item>
+  <ion-list lines="none">
 
-  <ion-button expand="block" (click) = "saveTodo()"> Guardar </ion-button>
+    <ion-item>
+      <ion-avatar class="avatar">
+        <ion-img
+          src="https://firebasestorage.googleapis.com/v0/b/buscatuprofe-2d148.appspot.com/o/1686552_thumb.png?alt=media&token=03277fb2-6efe-4518-a323-b42ee3f5fd79"
+          class="imagenPerfil"></ion-img>
+          
+      </ion-avatar>
 
+    </ion-item>
+    
+
+ 
+    <ion-item>
+      <h1>Biografia</h1>
+      <ion-icon name="md-create" class="iconosEditar"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label text-wrap color="medium"> Estudiante de la Universidad Carlos III de Madrid,
+        cursando actualmente el grado en Ingeniería Informática en la mención en Computación.
+        Me encanta todo lo relacionado con las nuevas tecnologías y la seguridad informática,
+        por ello, una vez finalice la carrera seguiré ampliando mi experiencia cursando un máster
+        en Ciberseguridad. </ion-label>
+    </ion-item>
+    <ion-item>
+      <h1>Detalles</h1>
+      <ion-icon name="md-create" class="iconosEditar"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label color="medium" style="text-align:justify"> Profesor Particular en mis ratos libres </ion-label>
+    </ion-item>
+    <ion-item>
+      <h1>Asignaturas</h1>
+      <ion-icon name="md-create" class="iconosEditar"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label color="medium"> Fisica, Lengua, Matematicas </ion-label>
+    </ion-item>
+    <ion-item>
+      <h1>Formas de Pago</h1>
+      <ion-icon name="md-create" class="iconosEditar"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label color="medium"> Efectivo, Transferencia </ion-label>
+    </ion-item>
+    <ion-item>
+      <h1>Localidad</h1>
+      <ion-icon name="md-create" class="iconosEditar"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label color="medium"> Colmenarejo </ion-label>
+    </ion-item>
+    <ion-item>
+      <h1>Precio: <b>15 €/hora</b></h1>
+      <ion-icon name="md-create" class="iconosEditar"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <div class="contactar">
+    <ion-button expand="block" expand="block" routerLink = "/search">Guardar</ion-button>
+  </div>
+<!--Antes el boton Guardar llamaba a la funcion saveTodo() pero esta creaba un perfil vacio ¿?-->
 </ion-content>
+
+<!--
+<ion-content>
+	<ion-list lines="none">
+  <ion-item>
+      <h2>Nombre</h2>
+    </ion-item>
+    <ion-item>
+        <ion-input [(ngModel)]="todo.name"></ion-input>
+      </ion-item>
+    <ion-item>
+      <h2>Apellidos</h2>
+    </ion-item>
+    <ion-item>
+        <ion-input [(ngModel)]="todo.firstName"></ion-input>
+      </ion-item>
+		<ion-item>
+			<h2>Biografia</h2>
+		</ion-item>
+		<ion-item>
+      <ion-input [(ngModel)]="todo.biografia"></ion-input>
+		</ion-item>
+		<ion-item>
+			<h2>Detalles</h2>
+		</ion-item>
+		<ion-item>
+      <ion-input [(ngModel)]="todo.detalles"></ion-input>
+		</ion-item>
+		<ion-item>
+			<h2>Asignaturas</h2>
+		</ion-item>
+		<ion-item>
+      <ion-input [(ngModel)]="todo.asignaturas"></ion-input>
+		</ion-item>
+		<ion-item>
+			<h2>Formas de Pago</h2>
+		</ion-item>
+		<ion-item>
+        <ion-input [(ngModel)]="todo.pago"></ion-input>
+      </ion-item>
+		<ion-item>
+			<h2>Localidad</h2>
+		</ion-item>
+		<ion-item>
+        <ion-input [(ngModel)]="todo.localidad"></ion-input>
+      </ion-item>
+    <ion-item>
+      <h2>Precio</h2>
+    </ion-item>
+		<ion-item>
+      <ion-input [(ngModel)]="todo.precio"></ion-input>
+		</ion-item>
+	</ion-list>
+  <ion-button expand="block" (click) = "saveTodo()"> Guardar </ion-button>
+</ion-content>
+
+-->

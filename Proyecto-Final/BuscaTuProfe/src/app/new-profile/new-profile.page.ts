@@ -6,14 +6,15 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { take } from 'rxjs/operators';
 import { perfil_teacher } from '../models/perfil_teacher';
 import { Todo, TodoService } from '../servicios/todo.service';
-
-
+import { AngularFireStorage } from "@angular/fire/storage"
+import { finalize } from 'rxjs/operators'
+import { Observable } from 'rxjs';
 @Component({
-  selector: 'app-editar-teacher-profile',
-  templateUrl: './editar-teacher-profile.page.html',
-  styleUrls: ['./editar-teacher-profile.page.scss'],
+  selector: 'app-new-profile',
+  templateUrl: './new-profile.page.html',
+  styleUrls: ['./new-profile.page.scss'],
 })
-export class EditarTeacherProfilePage implements OnInit {
+export class NewProfilePage implements OnInit {
 
 
 
@@ -35,7 +36,11 @@ export class EditarTeacherProfilePage implements OnInit {
     public router: Router,
     private todoService: TodoService,
     private route: ActivatedRoute,
-    private loadingController: LoadingController) { }
+    private loadingController: LoadingController,
+    private storage:AngularFireStorage) { }
+    
+    uploadPercent : Observable<number>;
+    urlImage : Observable<string>;
 
   ngOnInit() {
     this.todoId = this.route.snapshot.params['id'];
@@ -76,4 +81,16 @@ export class EditarTeacherProfilePage implements OnInit {
       });
     }
   }
+  onUpload(e){
+    //console.log(e);
+    const id = Math.random().toString(36).substring(2);
+    const file = e.target.files[0];
+    const filePath = `uploads/profile_${id}`;
+    const ref = this.storage.ref(filePath);
+    const task = this.storage.upload(filePath, file);
+    this.uploadPercent = task.percentageChanges();
+    task.snapshotChanges().pipe( finalize(()=> this.urlImage = ref.getDownloadURL())).subscribe();
+
+  }
+
 }

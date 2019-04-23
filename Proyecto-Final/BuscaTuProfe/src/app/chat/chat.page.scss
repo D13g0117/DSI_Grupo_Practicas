@@ -1,0 +1,67 @@
+ion-item {
+    --background:rgb(255, 223, 226);
+    margin: 5px 5px;
+    
+}   
+ion-list{
+    --background:rgb(245, 131, 131);
+    height: 95%;
+    text-decoration:none; 
+}
+ion-content{
+    --background:rgb(255, 255, 255);
+}
+.ion-item-border {
+    border-radius: 7px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    background: rgb(245, 131, 131);
+    text-decoration:none; 
+    }
+.ion-item-sliding {
+    border-radius: 7px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    background:rgb(255, 223, 226);
+    text-decoration:none; 
+    }    
+.imagen{
+    
+    display: inline;
+    width: 55px;
+    height: 55px;
+    margin: 0 auto;
+    
+}
+
+.logo{
+    float: left;
+    width: 40%;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    font-weight: 800;
+}
+.titulo{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    color: #FF473A;
+    margin-top: 10px;
+}
+.mas{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;  
+
+}
+.contactar{
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 1rem;
+    align-self: flex-end;
+    text-align: right;
+
+  }

@@ -4,12 +4,13 @@ import { NavController, NavParams, LoadingController } from '@ionic/angular';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-teacher-profile',
-  templateUrl: './teacher-profile.page.html',
-  styleUrls: ['./teacher-profile.page.scss'],
+  selector: 'app-teacher-profile-fake',
+  templateUrl: './teacher-profile-fake.page.html',
+  styleUrls: ['./teacher-profile-fake.page.scss'],
 })
-export class TeacherProfilePage implements OnInit {
+export class TeacherProfileFakePage implements OnInit {
 
+ 
   todo: Todo = {
     name: "",
     firstName: "",
@@ -51,6 +52,7 @@ export class TeacherProfilePage implements OnInit {
       this.todo = res;
     })
   }
+
 
 
 }

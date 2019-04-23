@@ -1,16 +1,16 @@
-import { NgModule, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SearchPage } from './search.page';
+import { TeacherProfileFakePage } from './teacher-profile-fake.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: SearchPage
+    component: TeacherProfileFakePage
   }
 ];
 
@@ -21,9 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [SearchPage]
+  declarations: [TeacherProfileFakePage]
 })
-export class SearchPageModule {
-
- 
-}
+export class TeacherProfileFakePageModule {}

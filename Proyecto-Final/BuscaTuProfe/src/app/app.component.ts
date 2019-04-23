@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AuthService } from './servicios/auth.service'
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html'
+  templateUrl: 'app.component.html',
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent  {
+
   public appPages = [
     {
       title: 'Buscar',
@@ -18,16 +21,27 @@ export class AppComponent {
     },
     {
       title: 'Perfil',
-      url: '/teacher-profile',
+      url: '/teacher-profile-fake',
       icon: 'contact'
+    },
+    {
+      title: 'Editar Perfil',
+      url: '/editar-teacher-profile',
+      icon: 'create'
     },
     {
       title: 'Conversaciones',
       url: '/chat',
       icon: 'ios-chatbubbles'
+    },
+    
+	{
+      title: 'FAQ',
+      url: '/faq',
+      icon: 'help'
     }
   ];
-
+  todoId = null;
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -43,6 +57,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });

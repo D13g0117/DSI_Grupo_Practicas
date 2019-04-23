@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="logo">BUSCA <br>TU <br> PROFE </ion-title>
+    <ion-title class="titulo">Editar Perfil</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list lines="none">
+    <ion-item>
+      <h1>Imagen de Perfil</h1>
+    </ion-item>
+    <ion-item >
+      <input  type="file" accept="=.png, .jpg" (change)="onUpload($event)">
+      <ng-template #btnDisabled>
+        <ion-button disabled="true" class="botonGuardar" expand="block" (click)="saveTodo()"> Guardar </ion-button>
+      </ng-template>
+    </ion-item>
+
+    <ion-item>
+      <h1>Nombre</h1>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" class="inputs" [(ngModel)]="todo.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h1>Apellidos</h1>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" class="inputs" [(ngModel)]="todo.firstName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h1>Biografia</h1>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" class="inputs" [(ngModel)]="todo.biografia"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h1>Detalles</h1>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" class="inputs" [(ngModel)]="todo.detalles"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h1>Asignaturas</h1>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" class="inputs" [(ngModel)]="todo.asignaturas"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h1>Formas de Pago</h1>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" class="inputs" [(ngModel)]="todo.pago"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h1>Localidad</h1>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" class="inputs" [(ngModel)]="todo.localidad"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h1>Precio</h1>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" class="inputs" [(ngModel)]="todo.precio"></ion-input>
+      <ion-input style="display:none" text="text" [value]="urlImage | async" [(ngModel)]="todo.img"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button *ngIf="urlImage | async; else btnDisabled" class="botonGuardar" expand="block" (click)="saveTodo()">
+    Guardar </ion-button>
+</ion-content>

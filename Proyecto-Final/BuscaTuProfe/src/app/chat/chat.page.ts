@@ -17,14 +17,6 @@ export class ChatPage implements OnInit {
 
   ngOnInit() {
     this.chatservice.getChatRooms().subscribe(chat =>{
-     /* chat.map(chat =>{
-
-        const data : chat = chat.payload.doc.data() as chat;
-        data.id = chat.payload.doc.id;
-
-        this.chatRooms.push(data);
-         
-      })*/
       this.chatRooms = chat
     })
   }
@@ -36,6 +28,11 @@ export class ChatPage implements OnInit {
       }
     }).then( (modal)=> modal.present())
 
+  }
+  remove(item) {
+    
+    this.chatservice.removeTodo(item);
+    
   }
 
 }

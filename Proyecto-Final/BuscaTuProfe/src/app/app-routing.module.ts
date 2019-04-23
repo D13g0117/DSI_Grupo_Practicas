@@ -20,11 +20,17 @@ const routes: Routes = [
   },
   { path: 'search', loadChildren: './search/search.module#SearchPageModule' , canActivate: [ AuthGuard]},
   { path: 'teacher-profile', loadChildren: './teacher-profile/teacher-profile.module#TeacherProfilePageModule' , canActivate: [ AuthGuard]},
+  { path: 'teacher-profile/:id', loadChildren: './teacher-profile/teacher-profile.module#TeacherProfilePageModule' , canActivate: [ AuthGuard]},
   { path: 'student-profile', loadChildren: './student-profile/student-profile.module#StudentProfilePageModule' , canActivate: [ AuthGuard]},
   { path: 'chat', loadChildren: './chat/chat.module#ChatPageModule' , canActivate: [ AuthGuard]},
   { path: 'registrar', loadChildren: './registrar/registrar.module#RegistrarPageModule' },
   { path: 'editar-teacher-profile', loadChildren: './editar-teacher-profile/editar-teacher-profile.module#EditarTeacherProfilePageModule' , canActivate: [ AuthGuard]},
-  { path: 'editar-teacher-profile/:id', loadChildren: './editar-teacher-profile/editar-teacher-profile.module#EditarTeacherProfilePageModule' , canActivate: [ AuthGuard]}
+  { path: 'editar-teacher-profile/:id', loadChildren: './editar-teacher-profile/editar-teacher-profile.module#EditarTeacherProfilePageModule' , canActivate: [ AuthGuard]},
+  { path: 'faq', loadChildren: './faq/faq.module#FaqPageModule' },
+  { path: 'teacher-profile-fake', loadChildren: './teacher-profile-fake/teacher-profile-fake.module#TeacherProfileFakePageModule' , canActivate: [ AuthGuard]},
+  { path: 'new-profile', loadChildren: './new-profile/new-profile.module#NewProfilePageModule' , canActivate: [ AuthGuard]}
+
+
 
 
 ];
